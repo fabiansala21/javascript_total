@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    
+
+    <div>
+        <h1 id="titulo_pagina"
+         onmouseover="ponerTituloRojo()"
+         onmouseout="quitarTituloRojo()"
+         >bienvenido a javascript</h1>
+
+        <h2>el primero es el mas grande</h2>
+
+        <p>para parrafos</p>
+        <p>secreto con f12</p>
+    </div>
+
+    <script>
+        function ponerTituloRojo() {
+
+            document.getElementById("titulo_pagina").style = "color: red";
+        
+        } 
+
+        function quitarTituloRojo(){
+
+            document.getElementById("titulo_pagina").style = "color: black";
+
+
+        }
+    </script>
+
+</body>
+</html>
+
