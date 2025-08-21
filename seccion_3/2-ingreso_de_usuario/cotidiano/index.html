@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cotidiano</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+
+<body onload="iniciarTemporizador()">
+
+    <center>
+        <h1>Cuestionario: Responde las preguntas</h1>
+        <h2 id="contador">30</h2>
+        <br>
+
+        <p>¿Cuál es el cantante con más oyentes en LATAM?</p>
+        <input type="text" id="cantanteresp">
+        <br>
+
+        <p>¿Cuál es la ropa más valiosa de tenis?</p>
+        <input type="text" id="marcaresp">
+        <br>
+
+        <p>¿De qué país es la marca ZARA?</p>
+        <input type="text" id="paisresp">
+        <br>
+
+        <p>¿Qué canción de Bad Bunny tiene un verso que dice "yo me enamoro 515 veces y contigo son 516"?</p>
+        <input type="text" id="cancionresp">
+        <br>
+
+        <p>¿Quién canta "Felices los 4"?</p>
+        <input type="text" id="malumaresp">
+        <br><br>
+
+        <button onclick="terminar()">Terminé</button>
+        <br><br>
+        <button onclick="volverIntentar()">Volver a intentar</button>
+    </center>
+
+    <script>
+        let tiempo = 30;
+        let intervalo;
+        let contador = document.getElementById("contador");
+
+        
+        const respuestasCorrectas = [
+            "bad bunny",      
+            "nike",           
+            "españa",         
+            "bokete",            
+            "maluma"          
+        ];
+
+        
+        const preguntas = [
+            "¿Cuál es el cantante con más oyentes en LATAM?",
+            "¿Cuál es la ropa más valiosa de tenis?",
+            "¿De qué país es la marca ZARA?",
+            "¿Qué canción de Bad Bunny tiene un verso que dice 'yo me enamoro 515 veces y contigo son 516'?",
+            "¿Quién canta 'Felices los 4'?"
+        ];
+
+        function iniciarTemporizador() {
+            tiempo = 30;
+            contador.textContent = tiempo;
+
+            intervalo = setInterval(() => {
+                if (tiempo > 0) {
+                    tiempo--;
+                    contador.textContent = tiempo;
+                } else {
+                    tiempoTerminado();
+                    clearInterval(intervalo);
+                }
+            }, 1000);
+        }
+
+        function terminar() {
+            clearInterval(intervalo);
+
+            
+            let respuestasUsuario = [
+                document.getElementById("cantanteresp").value.toLowerCase(),
+                document.getElementById("marcaresp").value.toLowerCase(),
+                document.getElementById("paisresp").value.toLowerCase(),
+                document.getElementById("cancionresp").value.toLowerCase(),
+                document.getElementById("malumaresp").value.toLowerCase()
+            ];
+
+            let resultado = "";
+            let aciertos = 0;
+
+            for (let i = 0; i < respuestasCorrectas.length; i++) {
+                if (respuestasUsuario[i] === respuestasCorrectas[i]) {
+                    resultado += preguntas[i] + "\nTu respuesta: " + respuestasUsuario[i] + " Correcto\n\n";
+                    aciertos++;
+
+                } else {
+
+                    resultado += preguntas[i] + "\nTu respuesta: " + respuestasUsuario[i] + "\nRespuesta correcta: " + respuestasCorrectas[i] + "\n\n";
+                }
+            }
+
+            resultado += "Aciertos totales: " + aciertos + "/" + respuestasCorrectas.length;
+
+            alert(resultado);
+        }
+
+        function volverIntentar() {
+            location.reload();
+        }
+
+        function tiempoTerminado() {
+            alert("Se terminó el tiempo");
+        }
+    </script>
+</body>
+
+</html>
