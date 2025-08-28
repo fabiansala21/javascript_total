@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mini Calculadora</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <p>Introduce los números y elige la operación:</p>
+    <br>
+    <input class="inputs" type="number" id="n1"> 
+    <input class="inputs" type="number" id="n2">
+    <br><br>
+
+    
+    <button onclick="sumarNum()">Sumar</button> 
+    <button onclick="restarNum()">Restar</button> 
+    <button onclick="multiNum()">Multiplicar</button> 
+    <button onclick="divNum()">Dividir</button>
+    <br><br>
+
+    <button onclick="raizCuadrada()">Raíz</button> 
+    <button onclick="elevar()">x^y</button>
+    <button onclick="valorAbs()">Absoluto</button> 
+    <button onclick="aleatorio()">Random</button>
+    <br><br>
+
+ 
+    <p><b>Resultado:</b></p>
+    <div id="res">Aquí aparecerá el resultado</div>
+    <br><br>
+
+
+    <button onclick="redondear()">Redondear</button> 
+    <button onclick="redondearAbajo()">Floor</button> 
+    <button onclick="redondearArriba()">Ceil</button>
+
+    <script>
+        let n1 = document.getElementById("n1");
+        let n2 = document.getElementById("n2");
+        let res = document.getElementById("res");
+
+        function sumarNum() {
+            res.textContent = Number(n1.value) + Number(n2.value);
+        }
+        function restarNum() {
+            res.textContent = Number(n1.value) - Number(n2.value);
+        }
+        function multiNum() {
+            res.textContent = Number(n1.value) * Number(n2.value);
+        }
+        function divNum() {
+            res.textContent = Number(n1.value) / Number(n2.value);
+        }
+        function raizCuadrada() {
+            res.textContent = Math.sqrt(Number(n1.value));
+        }
+        function elevar() {
+            res.textContent = Math.pow(Number(n1.value), Number(n2.value));
+        }
+        function valorAbs() {
+            res.textContent = Math.abs(Number(n1.value));
+        }
+        function aleatorio() {
+            res.textContent = Math.floor(Math.random() * 500) + 1; // ahora entre 1 y 500
+        }
+        function redondear() {
+            res.textContent = Math.round(Number(res.textContent));
+        }
+        function redondearAbajo() {
+            res.textContent = Math.floor(Number(res.textContent));
+        }
+        function redondearArriba() {
+            res.textContent = Math.ceil(Number(res.textContent));
+        }
+    </script>
+</body>
+
+</html>

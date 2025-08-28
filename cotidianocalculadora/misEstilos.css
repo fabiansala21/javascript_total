@@ -1,0 +1,77 @@
+body {
+    background: linear-gradient(to right, rgb(230, 255, 250), rgb(100, 200, 180), rgb(0, 150, 120));
+    font-family: Verdana, Geneva, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(0, 130, 110);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-shadow: 1px 1px 3px black;
+}
+
+.textodeResp {
+    font-weight: bold;
+    color: rgb(0, 90, 70);
+    margin-top: 10px;
+    display: block;
+}
+
+.aviso {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.inputs {
+    width: 180px;
+    height: 30px;
+    border: 2px solid rgb(0, 130, 110);
+    border-radius: 5px;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+button {
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.arriba {
+    background-color: rgb(0, 130, 110);
+    width: 90px;
+    height: 45px;
+}
+
+.medio {
+    background-color: rgb(20, 160, 120);
+    width: 180px;
+    height: 45px;
+}
+
+.abajo {
+    background-color: rgb(40, 180, 150);
+    width: 120px;
+    height: 45px;
+}
+
+button:hover {
+    background-color: rgb(0, 100, 90);
+}
+
+h2 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 90, 70);
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 15px;
+    border: 2px solid rgb(0, 130, 110);
+    border-radius: 5px;
+}
