@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cotidiano Cine</title>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script src="misScripts.js"></script>
+</head>
+
+<body>
+    <h1 class="titulos">Recomendador de películas</h1>
+    <h2 class="titulos">Bienvenidos al cine</h2>
+
+    <p class="textos">Menu</p>
+
+    <p class="textos">vamos a darte una experiencia increible, tenemos aseguado que encontraras la mejores peliculas</p>
+
+    <p class="textos">Edad:</p> <input type="number" id="edadInput">
+    <br><br>
+
+    <button onclick="recomendar('romanticas')">Drama</button> <button onclick="recomendar('miedo')">Comedia</button>
+    <button onclick="recomendar('detectives')">Musical</button> <button onclick="recomendar('accion')">Crimen</button>
+
+    <h3 class="titulos">Nuestras recomendaciones:</h3>
+    <p class="resp" id="recomendacion"></p>
+
+</body>
+</html>
