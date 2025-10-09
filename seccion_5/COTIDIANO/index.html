@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <title>Cotidiano Cine</title>
+    <meta charset="UTF-8">
+    <title>Cine Estelar</title>
     <link rel="stylesheet" href="misEstilos.css">
     <script src="misScripts.js"></script>
 </head>
 
 <body>
-    <h1 class="titulos">Recomendador de películas</h1>
-    <h2 class="titulos">Bienvenidos al cine</h2>
+    <h1>Bienvenido a Cine Estelaaar</h1>
+    <h3>Encuentra tu película ideal</h3>
+    <p>En Cine Estelar queremos que disfrutes al máximo tu experiencia.  
+       Ingresa tu edad y selecciona el tipo de película que más te guste, ¡y te daremos una recomendación especial!</p>
 
-    <p class="textos">Menu</p>
+    <p>Edad: <input type="number" id="edad" placeholder="Tu edad"></p>
 
-    <p class="textos">vamos a darte una experiencia increible, tenemos aseguado que encontraras la mejores peliculas</p>
+    <button onclick="recomendar('accion')">Acción</button>
+    <button onclick="recomendar('romance')">Romance</button>
+    <button onclick="recomendar('terror')">Terror</button>
+    <button onclick="recomendar('animacion')">Animación</button>
+    <button onclick="recomendar('ficcion')">Ciencia Ficción</button>
 
-    <p class="textos">Edad:</p> <input type="number" id="edadInput">
-    <br><br>
+    <h3>Nuestra recomendación:</h3>
+    <h2 id="recomendacion"></h2>
 
-    <button onclick="recomendar('romanticas')">Drama</button> <button onclick="recomendar('miedo')">Comedia</button>
-    <button onclick="recomendar('detectives')">Musical</button> <button onclick="recomendar('accion')">Crimen</button>
-
-    <h3 class="titulos">Nuestras recomendaciones:</h3>
-    <p class="resp" id="recomendacion"></p>
-
+    <div class="container">
+        <h2>Clasificación de películas por edad</h2>
+        <ul>
+            <li><strong>Menores de 12 años:</strong> Películas animadas o familiares.</li>
+            <li><strong>13 a 17 años:</strong> Aventuras, comedias y acción ligera.</li>
+            <li><strong>18 años o más:</strong> Todos los géneros sin restricción.</li>
+        </ul>
+    </div>
 </body>
 </html>
