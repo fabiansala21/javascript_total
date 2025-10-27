@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ctp.jpg">
+    <title>Registro Académico</title>
+    <script src="misScripts.js"></script>
+    <link rel="stylesheet" href="miEstilo.css">
+</head>
+
+<body onload="mostrarNotas()">
+  
+    <header>
+        <img src="ctp.jpg" alt="logo" class="imagenLogo">
+        <h1>Registro de Calificaciones</h1>
+        <h2 class="nombreEstudiante">Estudiante: Fabián Hernandez Salazar</h2>
+    </header>
+
+    <section class="contenedorNotas">
+        <h3 class="subtitulo">Calificaciones:</h3>
+        <ul id="listaCalificaciones" class="listaCalificaciones"></ul>
+    </section>
+
+    <section class="zonaBotones">
+        <button onclick="promedioFinal()">Mostrar Promedio</button>
+        <h3>Promedio general: <span id="resultadoPromedio"></span></h3><br>
+        <button onclick="notaMayor()">Nota más alta</button>
+        <h3>Calificación máxima: <span id="resultadoAlta"></span></h3><br>
+        <button onclick="revisarReprobados()">Ver si hay reprobados</button>
+        <h3>¿Hay notas bajas? <span id="resultadoReprobados"></span></h3>
+    </section>
+
+</body>
+
+</html>
