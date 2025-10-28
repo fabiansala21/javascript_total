@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js"></script>
+    <title>Facturacion Manual</title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+    <h1>Mini Facturacion Manual</h1>
+    <ul id="cliente"></ul>
+    <label for="cliente">nombre del cliente:</label>
+    <input type="text" id="producto">
+
+<br><br><br><br><br>
+
+    <label for="producto">nombre del producto:</label>
+    <input type="text" id="producto">
+
+    <label for="precio">precio:</label>
+    <input type="text" id="precio">
+
+    <label for="cantidad">cantidad de productos:</label>
+    <input type="text" id="cantidad">   
+
+    <br><br><br><br><br>
+
+    <label for="descuento">descuento aplicado:</label>
+    <input type="text" id="descuento" value="%">
+
+    <label for="impuesto">impuesto aplicado:</label>
+    <input type="text" id="impuesto" value="%">
+
+<br><br><br>
+
+    <ul id="detalleProducto"></ul>
+    <button onclick="Factura">Generar Factura</button>
+    <pre id="resumen Factura"></pre>
+</div>
+
+
+</body>
+
+
+</html>
