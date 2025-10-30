@@ -11,3 +11,24 @@
 body{
     background-color: white;
 }
+
+button{
+    background-color: #0066cc;
+
+}
+
+button:hover{
+
+    background-color: #004999;
+
+}
+
+ul{
+    background-color: #eef;
+    border-radius: 8%;
+}
+    
+il{
+    background-color: #eef;
+    border-radius: 8%;
+}
